@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+option go_package = "./pb";
+
+service TodoService {
+    rpc GetTodo(GetTodoRequest) returns (GetTodoResponse) {}
+    rpc GetTodos(Empty) returns (GetTodosResponse) {}
+    rpc CreateTodo(CreateTodoRequest) returns (CreateTodoResponse) {}
+    rpc DeleteTodo(DeleteTodoRequest) returns (DeleteTodoResponse) {}
+}
+
+// Types for GetTodo
+message GetTodoRequest {
+    string id = 1;
+}
+
+message GetTodoResponse {
+    Todo todo = 1;
+}
+
+// Types for GetTodos
+message GetTodosResponse {
+    repeated Todo todos = 1;
+}
+
+// Types for CreateTodo
+message CreateTodoRequest {
+    string title = 1;
+}
+
+message CreateTodoResponse {
+    Todo todo = 1;
+}
+
+// Types for DeleteTodo
+message DeleteTodoRequest {
+    string id = 1;
+}
+
+message DeleteTodoResponse {
+    int64 affected = 1;
+}
+
+// Custom types
+message Todo {
+    string id = 1;
+    string title = 2;
+}
+
+message Empty {
+}
