@@ -13,9 +13,9 @@ A barebones example of accessing CockroachDB via gRPC
 Start a cluster
 ```
 $ cockroach start-single-node \
-		--listen-addr=localhost:26257 \
-		--http-addr=localhost:8080 \
-		--insecure
+    --listen-addr=localhost:26257 \
+    --http-addr=localhost:8080 \
+    --insecure
 ```
 
 Create a table
