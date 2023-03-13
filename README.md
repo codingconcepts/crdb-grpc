@@ -8,7 +8,7 @@ A barebones example of accessing CockroachDB via gRPC
 * [Protobuf Gen Go](https://grpc.io/docs/languages/go/quickstart)
 * [grpcurl](https://github.com/fullstorydev/grpcurl)
 
-### Running Locally
+### Running locally
 
 Start a cluster
 ```
