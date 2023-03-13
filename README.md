@@ -70,10 +70,3 @@ $ grpcurl \
 	-d '{"id": "15c494cd-1c87-45ae-b725-cbf436eda43c"}' \
 		localhost:8080 TodoService.DeleteTodo
 ```
-
-
-
-
-
-
-
